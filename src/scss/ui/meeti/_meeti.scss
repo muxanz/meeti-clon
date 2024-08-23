@@ -1,0 +1,20 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.main {
+   &__heading {
+      @include m.heading;
+   }
+
+   &__grid {
+      margin-top: 5rem;
+
+      @include m.tablet {
+         @include m.grid(3, 2rem);
+      }
+   }
+
+   &__principal {
+      grid-column: 1 / 3;
+   }
+}
